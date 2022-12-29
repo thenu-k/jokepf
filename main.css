@@ -1,0 +1,147 @@
+* {
+    margin: 0; border: 0; padding: 0;
+    text-decoration: none; list-style: none; font-size: 16px; font-weight: normal;
+    color: inherit; 
+}
+
+.center{
+    display: flex; justify-content: center; align-items: center;
+}
+
+html{
+    background-color: black;
+}
+
+body{
+    width: 900px;
+    background-color: rgb(29, 29, 29);
+    display: flex;  align-items: center; justify-content: center; flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    border: 5px solid red;
+    background-color: blue;
+}
+header .container{
+    width: 100%;
+    height: 100%; width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+header h1{
+    top: 0; left: 0;
+    position: absolute;
+    /* animation: colorChange 4s steps(4) infinite, move1 800ms linear infinite alternate; */
+    color: white;
+    font-size: 3em; font-weight: 700;
+    height: 100%; width: 100%;
+}
+@keyframes move1 {
+    0%{
+        left: 0;
+        color: white;
+    }
+    100%{
+        left: 300px
+    }
+}
+
+.about{
+    width: 100%;
+    margin-top: 50px;
+    display: flex; flex-direction: row; align-items: flex-start;
+}
+.about .image{
+    height: 400px; width: 400px;
+    overflow: hidden;
+    margin: 20px;
+    border: 5px solid white;
+    position: relative;
+    flex-shrink: 0;
+}
+.about img.me{
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+.about .glContainer{
+    top: 13%; right: 33.5%;
+    height: 25px;
+    width: 90px;
+    position: absolute;
+    z-index: 99;
+    /* background-color: white; */
+    overflow: hidden;
+    animation-name: size; animation-duration: 500ms; animation-iteration-count: infinite; animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.about .glContainer img{
+    width: 100%;
+}
+@keyframes size {
+    from{width: 120px;}
+    to{width: 100px;}
+}
+.about .text{
+    color: white;
+    margin-top: 20px;
+}
+.about p{
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.about p span{
+    all: inherit;
+    display: inline;
+}
+.about .yellow{color: yellow}
+.about .red{color: red}
+.about .com1{font-size: 1.8em; color: white; background-color: blue;}
+
+body > .facts{
+    margin-top: 30px;
+    width: 100%;
+    color: white;
+}
+.facts h2{
+    font-size: 1.5em;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+}
+.facts ol{
+    margin: 20px 0;
+    width: 100%;
+    display: flex; flex-direction: column; align-items: center;
+}
+.facts li{
+    margin-bottom: 40px;
+    width: 90%;
+    display: flex; flex-direction: column; align-items: center;
+}
+.facts li p{
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.facts li img{
+    height: 300px; 
+    margin-top: 30px;
+    border: 5px solid white;
+}
+
+body > h2{
+    margin-top: 100px;
+    padding: 20px 0;
+    font-size: 1.5em;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+body > h2 > a{
+    font-size: inherit;
+    text-decoration: underline;
+}
